@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+<h1> {{ title }} </h1>
+{% for m in menu %}
+<li>{{ m }}</li>
+{% endfor %}
+<form method="POST" action="/project/">
+{% csrf_token %}
+        <table>
+        <label for="username">Названеи проекта</label> |
+        <input id="username" name="username" type="text" value="root">
+        <br />
+        <label for="customer_price">ЦЕНА для клиента</label> |
+        <input id="customer_price" name="customer_price" type="int" value="1">
+        <br />
+        <label for="сost_price">Себестоимость</label> |
+        <input id="сost_price" name="сost_price" type="int" value="1">
+        <br />
+        <label for="money_manager">Деньги менеджера 10%</label> |
+        <input id="money_manager" name="money_manager" type="int" value="1">
+        <br />
+        <label for="preparing_for_broadcast">Подготовка к трансляции</label> |
+        <input id="preparing_for_broadcast" name="preparing_for_broadcast" type="int" value="1">
+        <br />
+        <label for="installation_Dismantling">Монтаж Демонтаж оборудования</label> |
+        <input id="installation_Dismantling" name="installation_Dismantling" type="int" value="1">
+        <br />
+        <label for="broadcasting">Проведение трансляции</label> |
+        <input id="broadcasting" name="broadcasting" type="int" value="1">
+        <br />
+        <label for="employee_money">За наймного работника</label> |
+        <input id="employee_money" name="employee_money" type="int" value="1">
+        <br />
+        <label for="led_screen_rental">Аренда экрана</label> |
+        <input id="led_screen_rental" name="led_screen_rental" type="int" value="1">
+        <br />
+        <label for="Taxi_transport_costs">Такси и грузоперевозки</label> |
+        <input id="Taxi_transport_costs" name="Taxi_transport_costs" type="int" value="1">
+        <br />
+        <label for="payroll_taxes">Налоги и зп</label> |
+        <input id="payroll_taxes" name="payroll_taxes" type="int" value="1">
+        <br />
+        <label for="general_running_costs">Общехозяйственные расходы</label> |
+        <input id="general_running_costs" name="general_running_costs" type="int" value="1">
+        <br />
+        <label for="Profit">Прибыль</label> |
+        <input id="Profit" name="Profit" type="int" value="1">
+        <br />
+        <label for="Profitability">Прибыль</label> |
+        <input id="Profitability" name="Profitability" type="int" value="1">
+        <br />
+        </table>
+    <input type="submit" value="Ok">
+</form>
+</body>
+</html>
