@@ -38,3 +38,7 @@ def project(request):
             Profitability = request.POST["Profitability"],
         )
         return render(request, 'project_all.html', context)
+
+
+def project_all(request):
+    return render(request, 'project_all.html', context)

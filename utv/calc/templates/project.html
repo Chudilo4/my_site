@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{ title }}</title>
-</head>
-<body>
-<h1> {{ title }} </h1>
-{% for m in menu %}
-<li>{{ m }}</li>
-{% endfor %}
+{% extends 'base.html' %}
+{% block content %}
 <form method="POST" action="/project/">
 {% csrf_token %}
         <table>
@@ -57,5 +48,4 @@
         </table>
     <input type="submit" value="Ok">
 </form>
-</body>
-</html>
+{% endblock %}
