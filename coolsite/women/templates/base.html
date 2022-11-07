@@ -2,16 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{{ title }}</title>
+    <title>{{title}}</title>
 </head>
 <body>
 {% block mainmenu %}
 <ul>
-    {% for m in menu %}
-    <li>{{ m }}</li>
-    {% endfor %}
+{% for m in menu %}
+    <li>{{m}}</li>
+{% endfor %}
 </ul>
 {% endblock mainmenu %}
+
 {% block content %}
 {% endblock %}
 </body>
