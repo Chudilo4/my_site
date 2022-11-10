@@ -11,11 +11,9 @@ menu = [{'title':'О сайте', 'url_name': 'about'},
 
 def index(request):
     post = Women.objects.all()
-    cats = Category.objects.all()
     return render(request, 'index.html', {'title': 'Главная страница',
                                           'menu': menu,
                                           'posts': post,
-                                          'cats': cats,
                                           'cat_selected': 0,
                                           })
 
@@ -43,12 +41,10 @@ def showpost(request, post_id):
 
 def show_category(request, cat_id):
     post = Women.objects.filter(cat_id=cat_id)
-    cats = Category.objects.all()
     if  len(post) == 0:
         raise Http404()
     return render(request, 'index.html', {'title': 'Отоброжение по рубрикам',
                                           'menu': menu,
                                           'posts': post,
-                                          'cats': cats,
                                           'cat_selected': cat_id,
                                           })
